@@ -54,7 +54,8 @@ def print_empirical_distribution(arr):
 
 def plot_empirical_distribution_function(arr):
     x_values = np.linspace(min(arr) - 1, max(arr) + 1, 10000)
-    ecdf_values = [empirical_distribution_function(arr, x) for x in x_values]
+    ecdf_values = [empirical_distribution_function(arr, x)
+                   for x in x_values]
     plt.grid(which='both')
     plt.minorticks_on()
     plt.scatter(x_values, ecdf_values, marker='_', s=1)
